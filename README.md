@@ -24,7 +24,7 @@ O Viva Mais é um portal web criado para facilitar o acesso de idosos a informa�
 
 O projeto está hospedado no GitHub Pages:
 
-🔗 [Acessar o Viva Mais](https://anabeatwriz.github.io/viva-mais)
+🔗 [Acessar o Viva Mais](https://anabeatwriz.github.io/vivamais)
 
 ## Como rodar localmente
 
