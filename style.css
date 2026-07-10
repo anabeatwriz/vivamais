@@ -59,29 +59,105 @@ body {
 }
 
 /* =============================================
+   TAMANHO DE FONTE DINÂMICO
+   ============================================= */
+
+body.fonte-grande {
+  --fonte-base:    24px;
+  --fonte-sm:      20px;
+  --fonte-lg:      28px;
+  --fonte-xl:      34px;
+  --fonte-titulo:  40px;
+}
+
+body.fonte-pequena {
+  --fonte-base:    17px;
+  --fonte-sm:      15px;
+  --fonte-lg:      21px;
+  --fonte-xl:      26px;
+  --fonte-titulo:  32px;
+}
+
+/* =============================================
+   MODO ALTO CONTRASTE
+   ============================================= */
+
+body.alto-contraste {
+  --off-white:     #000000;
+  --branco:        #1A1A1A;
+  --cinza-texto:   #FFFFFF;
+  --cinza-suave:   #E0E0E0;
+  --cinza-borda:   #555555;
+  --azul-palido:   #1A2E44;
+  --verde-suave:   #0D2E1A;
+  --sombra:        0 2px 12px rgba(0, 0, 0, 0.4);
+  --sombra-card:   0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.alto-contraste .card-dica,
+body.alto-contraste .card-contato,
+body.alto-contraste .card-alimentacao,
+body.alto-contraste .card-dica-expandivel,
+body.alto-contraste .card-checklist,
+body.alto-contraste .card-ubs,
+body.alto-contraste .card-exercicio,
+body.alto-contraste .card-direitos {
+  border: 1px solid #555;
+}
+
+body.alto-contraste .nav-secoes {
+  background: #111;
+  border-bottom-color: #333;
+}
+
+body.alto-contraste .nav-link {
+  color: #ddd;
+  background: #222;
+}
+
+body.alto-contraste .nav-link:active {
+  background: var(--azul-medio);
+  color: white;
+}
+
+body.alto-contraste .card-direitos-header {
+  background: #1A2E44;
+}
+
+body.alto-contraste .card-alimentacao-header {
+  background: #1A2E44;
+}
+
+body.alto-contraste .checklist-item:has(.checklist-input:checked) {
+  background: #1A2E44;
+}
+
+/* =============================================
    HEADER
    ============================================= */
 
 .header {
   background: var(--azul-escuro);
-  padding: 18px 20px 14px;
+  padding: 14px 16px;
   position: sticky;
   top: 0;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .header-logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .header-logo-icone {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: var(--azul-claro);
   border-radius: 10px;
   display: flex;
@@ -90,23 +166,60 @@ body {
 }
 
 .header-logo-icone svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   fill: white;
 }
 
 .header-titulo {
   color: white;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.3px;
 }
 
 .header-subtitulo {
   color: var(--azul-suave);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   margin-top: 1px;
+}
+
+.header-acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-acessibilidade {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-acessibilidade {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.btn-acessibilidade:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-acessibilidade.ativo {
+  background: white;
+  color: var(--azul-escuro);
 }
 
 .btn-emergencia-header {
@@ -114,16 +227,17 @@ body {
   color: white;
   border: none;
   border-radius: var(--radius-sm);
-  padding: 10px 14px;
-  font-size: 14px;
+  padding: 8px 12px;
+  font-size: 13px;
   font-weight: 700;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   letter-spacing: 0.2px;
   transition: background 0.2s;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .btn-emergencia-header:active {
@@ -132,8 +246,47 @@ body {
 }
 
 .btn-emergencia-header svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
+}
+
+/* =============================================
+   NAVEGAÇÃO POR SEÇÕES
+   ============================================= */
+
+.nav-secoes {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--branco);
+  border-bottom: 1px solid var(--cinza-borda);
+  position: sticky;
+  top: 64px;
+  z-index: 90;
+}
+
+.nav-secoes::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  white-space: nowrap;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cinza-texto);
+  background: var(--azul-palido);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-link:active {
+  background: var(--azul-medio);
+  color: white;
 }
 
 /* =============================================
@@ -195,7 +348,19 @@ body {
 }
 
 /* =============================================
-   SEÇÃO DE EMERGÊNCIAS — destaque máximo
+   SEÇÃO GENÉRICA
+   ============================================= */
+
+.secao-descricao {
+  font-size: 15px;
+  color: var(--cinza-suave);
+  line-height: 1.55;
+  margin-bottom: 14px;
+  padding: 0 4px;
+}
+
+/* =============================================
+   SEÇÃO DE EMERGÊNCIAS
    ============================================= */
 
 .secao-emergencia {
@@ -492,7 +657,7 @@ body {
 }
 
 .card-dica-expandivel.aberto .card-dica-conteudo {
-  max-height: 400px;
+  max-height: 500px;
 }
 
 .card-dica-conteudo-inner {
@@ -510,6 +675,56 @@ body {
 
 .card-dica-conteudo-inner p:last-child {
   margin-bottom: 0;
+}
+
+/* =============================================
+   SEÇÃO EXERCÍCIOS
+   ============================================= */
+
+.secao-exercicios {
+  padding: 20px 16px 12px;
+}
+
+.card-exercicio {
+  background: var(--branco);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 10px;
+  box-shadow: var(--sombra);
+}
+
+.card-exercicio-numero {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--azul-medio);
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-exercicio-info {
+  flex: 1;
+}
+
+.card-exercicio-nome {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cinza-texto);
+  margin-bottom: 4px;
+}
+
+.card-exercicio-desc {
+  font-size: 15px;
+  color: var(--cinza-suave);
+  line-height: 1.55;
 }
 
 /* =============================================
@@ -554,6 +769,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  list-style: none;
 }
 
 .card-alimentacao-item {
@@ -572,6 +788,258 @@ body {
   border-radius: 50%;
   margin-top: 8px;
   flex-shrink: 0;
+}
+
+/* =============================================
+   SEÇÃO CHECKLIST DO DIA
+   ============================================= */
+
+.secao-checklist {
+  padding: 20px 16px 12px;
+}
+
+.card-checklist {
+  background: var(--branco);
+  border-radius: var(--radius-md);
+  padding: 8px 0;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: background 0.15s;
+  user-select: none;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.checklist-item:last-child {
+  border-bottom: none;
+}
+
+.checklist-item:active {
+  background: var(--azul-palido);
+}
+
+.checklist-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checklist-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 2.5px solid var(--cinza-borda);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  background: var(--branco);
+}
+
+.checklist-check::after {
+  content: '✓';
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.checklist-input:checked + .checklist-check {
+  background: var(--verde);
+  border-color: var(--verde);
+}
+
+.checklist-input:checked + .checklist-check::after {
+  opacity: 1;
+}
+
+.checklist-input:checked ~ .checklist-label {
+  text-decoration: line-through;
+  color: var(--cinza-suave);
+}
+
+.checklist-label {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--cinza-texto);
+  line-height: 1.3;
+}
+
+.checklist-feedback {
+  margin-top: 12px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  display: none;
+  line-height: 1.4;
+}
+
+.checklist-feedback.visivel {
+  display: block;
+}
+
+.checklist-feedback.parcial {
+  background: var(--azul-palido);
+  color: var(--azul-escuro);
+}
+
+.checklist-feedback.completo {
+  background: var(--verde-suave);
+  color: var(--verde);
+}
+
+/* =============================================
+   SEÇÃO UBS — POSTOS DE SAÚDE
+   ============================================= */
+
+.secao-ubs {
+  padding: 20px 16px 12px;
+}
+
+.card-ubs {
+  background: var(--branco);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+  box-shadow: var(--sombra);
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+
+.card-ubs:active {
+  transform: scale(0.97);
+}
+
+.card-ubs-icone {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.card-ubs-info {
+  flex: 1;
+}
+
+.card-ubs-nome {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cinza-texto);
+  line-height: 1.2;
+}
+
+.card-ubs-endereco {
+  font-size: 14px;
+  color: var(--cinza-suave);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.card-ubs-telefone {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--azul-medio);
+  margin-top: 4px;
+}
+
+/* =============================================
+   SEÇÃO MEUS DIREITOS
+   ============================================= */
+
+.secao-direitos {
+  padding: 20px 16px 12px;
+}
+
+.card-direitos {
+  background: var(--branco);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.card-direitos-header {
+  background: var(--azul-palido);
+  padding: 18px;
+}
+
+.card-direitos-badge {
+  display: inline-block;
+  background: var(--azul-medio);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.card-direitos-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--azul-escuro);
+  margin-bottom: 6px;
+}
+
+.card-direitos-sub {
+  font-size: 15px;
+  color: var(--cinza-suave);
+  line-height: 1.5;
+}
+
+.card-direitos-lista {
+  padding: 14px 18px;
+}
+
+.card-direito-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.card-direito-item:last-child {
+  border-bottom: none;
+}
+
+.card-direito-emoji {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.card-direito-item strong {
+  font-size: 15px;
+  color: var(--cinza-texto);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.card-direito-item p {
+  font-size: 14px;
+  color: var(--cinza-suave);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.card-direito-item a {
+  color: var(--azul-medio);
+  font-weight: 700;
+  text-decoration: none;
 }
 
 /* =============================================
@@ -670,6 +1138,40 @@ body {
 }
 
 /* =============================================
+   BOTÃO VOLTAR AO TOPO
+   ============================================= */
+
+.btn-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--azul-medio);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 16px rgba(24, 95, 165, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 80;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.15s;
+}
+
+.btn-topo.visivel {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-topo:active {
+  transform: scale(0.9);
+}
+
+/* =============================================
    UTILITÁRIOS
    ============================================= */
 
@@ -704,5 +1206,16 @@ a { text-decoration: none; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* =============================================
+   RESPONSIVO — telas maiores (tablet/desktop)
+   ============================================= */
+
+@media (min-width: 481px) {
+  body {
+    max-width: 640px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.08);
   }
 }

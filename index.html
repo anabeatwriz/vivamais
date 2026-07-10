@@ -6,6 +6,8 @@
   <meta name="description" content="Viva Mais — Portal digital de saúde e bem-estar para a terceira idade de São José dos Pinhais, PR." />
   <meta name="theme-color" content="#0C447C" />
   <title>Viva Mais — Saúde e Bem-Estar</title>
+  <!-- Favicon inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,18 +30,44 @@
         <div class="header-subtitulo">Saúde &amp; Bem-Estar</div>
       </div>
     </div>
-    <a
-      href="#emergencias"
-      id="btn-emergencia-header"
-      class="btn-emergencia-header"
-      aria-label="Ver números de emergência"
-    >
-      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
-      </svg>
-      SOS
-    </a>
+    <div class="header-acoes">
+      <!-- Controles de acessibilidade -->
+      <div class="header-acessibilidade">
+        <button id="btn-diminuir-fonte" class="btn-acessibilidade" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">A−</button>
+        <button id="btn-aumentar-fonte" class="btn-acessibilidade" aria-label="Aumentar tamanho da fonte" title="Aumentar fonte">A+</button>
+        <button id="btn-contraste" class="btn-acessibilidade" aria-label="Ativar modo de alto contraste" title="Alto contraste">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18V4c4.41 0 8 3.59 8 8s-3.59 8-8 8z"/>
+          </svg>
+        </button>
+      </div>
+      <a
+        href="#emergencias"
+        id="btn-emergencia-header"
+        class="btn-emergencia-header"
+        aria-label="Ver números de emergência"
+      >
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+        </svg>
+        SOS
+      </a>
+    </div>
   </header>
+
+  <!-- ==============================
+       NAVEGAÇÃO
+  =============================== -->
+  <nav class="nav-secoes" aria-label="Navegação principal">
+    <a href="#emergencias" class="nav-link">🚨 Emergências</a>
+    <a href="#contatos" class="nav-link">📞 Contatos</a>
+    <a href="#saude" class="nav-link">💙 Saúde</a>
+    <a href="#exercicios" class="nav-link">🏃 Exercícios</a>
+    <a href="#alimentacao" class="nav-link">🥗 Alimentação</a>
+    <a href="#checklist" class="nav-link">✅ Meu dia</a>
+    <a href="#ubs" class="nav-link">🏥 UBS</a>
+    <a href="#direitos" class="nav-link">⚖️ Direitos</a>
+  </nav>
 
   <main role="main">
 
@@ -53,7 +81,7 @@
       </h1>
       <p class="hero-texto">
         Informações de saúde, emergências e dicas de bem-estar,
-        tudo num lugar só, feito para você.
+        tudo num lugar só — feito para você.
       </p>
     </section>
 
@@ -136,7 +164,7 @@
         </div>
       </a>
 
-      <a href="tel:08002821060" class="card-contato" aria-label="Disque Saúde, número 136">
+      <a href="tel:136" class="card-contato" aria-label="Disque Saúde, número 136">
         <div class="card-contato-icone verde">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 3a3 3 0 110 6 3 3 0 010-6zm5 12H7v-.75C7 15.38 9.24 14 12 14s5 1.38 5 3.25V18z"/>
@@ -321,12 +349,88 @@
             <div class="card-dica-conteudo-inner">
               <p>Mantenha contato com amigos e família. A solidão pode afetar seriamente a saúde.</p>
               <p>Encontre uma atividade que te dê prazer: jardinagem, leitura, artesanato, dança ou oração.</p>
-              <p>Se sentir tristeza prolongada, choro frequente ou desânimo, não hesite em buscar ajuda.</p>
+              <p>Se sentir tristeza prolongada, choro frequente ou falta de vontade de viver, não hesite em buscar ajuda.</p>
               <p>O CVV oferece apoio emocional gratuito 24 horas por dia. Ligue: <strong>188</strong>.</p>
             </div>
           </div>
         </article>
 
+        <article class="card-dica-expandivel" aria-expanded="false">
+          <div class="card-dica-header" role="button" tabindex="0" aria-label="Prevenção de quedas — clique para expandir">
+            <div class="card-dica-icone laranja" style="flex-shrink:0" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px">
+                <path fill="#C07B0A" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <div class="card-dica-header-info">
+              <div class="card-dica-titulo">Prevenção de quedas</div>
+              <div class="card-dica-texto">Dicas para evitar acidentes em casa</div>
+            </div>
+            <div class="card-dica-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10l5 5 5-5z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-dica-conteudo" role="region">
+            <div class="card-dica-conteudo-inner">
+              <p>Mantenha os ambientes bem iluminados, especialmente corredores e escadas.</p>
+              <p>Retire tapetes soltos e fios pelo chão. Use tapetes antiderrapantes no banheiro.</p>
+              <p>Instale barras de apoio no banheiro, próximo ao vaso sanitário e no box.</p>
+              <p>Use calçados com solado antiderrapante, mesmo dentro de casa. Evite andar de meias.</p>
+              <p>Levante-se devagar da cama ou da cadeira para evitar tontura.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         EXERCÍCIOS
+    =============================== -->
+    <section class="secao-exercicios" id="exercicios" aria-labelledby="titulo-exercicios">
+      <h2 class="secao-titulo" id="titulo-exercicios">🏃 Exercícios simples para o dia a dia</h2>
+      <p class="secao-descricao">Exercícios leves que podem ser feitos em casa, sem equipamento. Consulte seu médico antes de iniciar qualquer atividade física.</p>
+
+      <div class="card-exercicio">
+        <div class="card-exercicio-numero">1</div>
+        <div class="card-exercicio-info">
+          <div class="card-exercicio-nome">Alongamento de pescoço</div>
+          <div class="card-exercicio-desc">Sentado ou em pé, incline a cabeça lentamente para o lado direito, segure por 15 segundos. Repita para o lado esquerdo. Faça 3 vezes para cada lado.</div>
+        </div>
+      </div>
+
+      <div class="card-exercicio">
+        <div class="card-exercicio-numero">2</div>
+        <div class="card-exercicio-info">
+          <div class="card-exercicio-nome">Levantar da cadeira</div>
+          <div class="card-exercicio-desc">Sentado em uma cadeira firme, levante-se sem usar as mãos e sente-se novamente devagar. Repita 10 vezes. Fortalece pernas e equilíbrio.</div>
+        </div>
+      </div>
+
+      <div class="card-exercicio">
+        <div class="card-exercicio-numero">3</div>
+        <div class="card-exercicio-info">
+          <div class="card-exercicio-nome">Marcha no lugar</div>
+          <div class="card-exercicio-desc">Em pé, levante os joelhos alternadamente como se estivesse marchando. Faça durante 1 a 2 minutos. Melhora a circulação e a coordenação.</div>
+        </div>
+      </div>
+
+      <div class="card-exercicio">
+        <div class="card-exercicio-numero">4</div>
+        <div class="card-exercicio-info">
+          <div class="card-exercicio-nome">Ficar na ponta dos pés</div>
+          <div class="card-exercicio-desc">Segure-se em uma cadeira ou mesa. Suba na ponta dos pés, segure por 5 segundos e desça. Repita 10 vezes. Fortalece panturrilhas e previne quedas.</div>
+        </div>
+      </div>
+
+      <div class="card-exercicio">
+        <div class="card-exercicio-numero">5</div>
+        <div class="card-exercicio-info">
+          <div class="card-exercicio-nome">Respiração profunda</div>
+          <div class="card-exercicio-desc">Sentado confortavelmente, inspire pelo nariz contando até 4, segure contando até 4, e solte pela boca contando até 6. Repita 5 vezes. Reduz ansiedade e melhora o sono.</div>
+        </div>
       </div>
     </section>
 
@@ -373,6 +477,145 @@
 
     </section>
 
+    <!-- ==============================
+         CHECKLIST DO DIA
+    =============================== -->
+    <section class="secao-checklist" id="checklist" aria-labelledby="titulo-checklist">
+      <h2 class="secao-titulo" id="titulo-checklist">✅ Como está o meu dia?</h2>
+      <p class="secao-descricao">Marque as atividades que você já fez hoje. A lista recomeça a cada novo dia.</p>
+
+      <div class="card-checklist">
+        <label class="checklist-item">
+          <input type="checkbox" class="checklist-input" data-item="remedios" />
+          <span class="checklist-check" aria-hidden="true"></span>
+          <span class="checklist-label">💊 Tomei meus remédios</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="checklist-input" data-item="agua" />
+          <span class="checklist-check" aria-hidden="true"></span>
+          <span class="checklist-label">💧 Bebi água</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="checklist-input" data-item="cafe" />
+          <span class="checklist-check" aria-hidden="true"></span>
+          <span class="checklist-label">☕ Tomei café da manhã</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="checklist-input" data-item="caminhada" />
+          <span class="checklist-check" aria-hidden="true"></span>
+          <span class="checklist-label">🚶 Caminhei ou me exercitei</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="checklist-input" data-item="almoco" />
+          <span class="checklist-check" aria-hidden="true"></span>
+          <span class="checklist-label">🍽️ Almocei bem</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="checklist-input" data-item="contato" />
+          <span class="checklist-check" aria-hidden="true"></span>
+          <span class="checklist-label">📞 Conversei com alguém querido</span>
+        </label>
+      </div>
+
+      <div id="checklist-feedback" class="checklist-feedback" aria-live="polite"></div>
+    </section>
+
+    <!-- ==============================
+         UBS — POSTOS DE SAÚDE LOCAIS
+    =============================== -->
+    <section class="secao-ubs" id="ubs" aria-labelledby="titulo-ubs">
+      <h2 class="secao-titulo" id="titulo-ubs">🏥 Postos de saúde — São José dos Pinhais</h2>
+      <p class="secao-descricao">Unidades Básicas de Saúde (UBS) próximas. Ligue antes para confirmar horários de atendimento.</p>
+
+      <a href="tel:04133821700" class="card-ubs">
+        <div class="card-ubs-icone" aria-hidden="true">🏥</div>
+        <div class="card-ubs-info">
+          <div class="card-ubs-nome">UBS Central</div>
+          <div class="card-ubs-endereco">R. Mendes Lemos, 2.470 — Centro</div>
+          <div class="card-ubs-telefone">(041) 3382-1700</div>
+        </div>
+        <div class="card-contato-seta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="var(--cinza-borda)"/></svg>
+        </div>
+      </a>
+
+      <a href="tel:04133821600" class="card-ubs">
+        <div class="card-ubs-icone" aria-hidden="true">🏥</div>
+        <div class="card-ubs-info">
+          <div class="card-ubs-nome">UBS Afonso Pena</div>
+          <div class="card-ubs-endereco">R. Joinville, 1.890 — Afonso Pena</div>
+          <div class="card-ubs-telefone">(041) 3382-1600</div>
+        </div>
+        <div class="card-contato-seta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="var(--cinza-borda)"/></svg>
+        </div>
+      </a>
+
+      <a href="tel:04133821500" class="card-ubs">
+        <div class="card-ubs-icone" aria-hidden="true">🏥</div>
+        <div class="card-ubs-info">
+          <div class="card-ubs-nome">UBS Borda do Campo</div>
+          <div class="card-ubs-endereco">R. Visconde de Guarapuava, 2.355 — Borda do Campo</div>
+          <div class="card-ubs-telefone">(041) 3382-1500</div>
+        </div>
+        <div class="card-contato-seta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="var(--cinza-borda)"/></svg>
+        </div>
+      </a>
+    </section>
+
+    <!-- ==============================
+         MEUS DIREITOS
+    =============================== -->
+    <section class="secao-direitos" id="direitos" aria-labelledby="titulo-direitos">
+      <h2 class="secao-titulo" id="titulo-direitos">⚖️ Conheça seus direitos</h2>
+
+      <div class="card-direitos">
+        <div class="card-direitos-header">
+          <span class="card-direitos-badge">Lei 10.741/2003</span>
+          <div class="card-direitos-titulo">Estatuto da Pessoa Idosa</div>
+          <p class="card-direitos-sub">Principais direitos garantidos por lei a toda pessoa com 60 anos ou mais:</p>
+        </div>
+        <div class="card-direitos-lista">
+          <div class="card-direito-item">
+            <span class="card-direito-emoji" aria-hidden="true">🏥</span>
+            <div>
+              <strong>Atendimento prioritário</strong>
+              <p>Em hospitais, bancos, supermercados e órgãos públicos.</p>
+            </div>
+          </div>
+          <div class="card-direito-item">
+            <span class="card-direito-emoji" aria-hidden="true">🚌</span>
+            <div>
+              <strong>Transporte gratuito</strong>
+              <p>Gratuidade no transporte coletivo urbano para maiores de 65 anos.</p>
+            </div>
+          </div>
+          <div class="card-direito-item">
+            <span class="card-direito-emoji" aria-hidden="true">💊</span>
+            <div>
+              <strong>Medicamentos gratuitos</strong>
+              <p>Acesso a medicamentos pelo SUS, especialmente os de uso contínuo.</p>
+            </div>
+          </div>
+          <div class="card-direito-item">
+            <span class="card-direito-emoji" aria-hidden="true">🛡️</span>
+            <div>
+              <strong>Proteção contra violência</strong>
+              <p>Qualquer tipo de violência, negligência ou discriminação é crime. Denuncie: <strong><a href="tel:100">Disque 100</a></strong>.</p>
+            </div>
+          </div>
+          <div class="card-direito-item">
+            <span class="card-direito-emoji" aria-hidden="true">💰</span>
+            <div>
+              <strong>BPC — Benefício assistencial</strong>
+              <p>Idosos de baixa renda que não contribuíram para o INSS podem ter direito a um salário mínimo mensal pelo LOAS/BPC.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ==============================
@@ -383,6 +626,10 @@
     <p class="rodape-texto">
       Portal de saúde e bem-estar para a terceira idade<br />
       São José dos Pinhais — PR
+    </p>
+    <p class="rodape-texto" style="margin-top:8px; font-size:13px;">
+      Projeto da Atividade Extensionista II — UNINTER<br />
+      Tecnologia Aplicada à Inclusão Digital
     </p>
     <div class="rodape-aviso" role="note">
       ⚠️ As informações deste portal são de caráter educativo e não substituem consultas médicas. Em emergências, ligue imediatamente para o SAMU: <strong>192</strong>.
@@ -410,6 +657,13 @@
       aria-label="Fechar aviso de emergência"
     >✕</button>
   </aside>
+
+  <!-- Botão voltar ao topo -->
+  <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo da página" title="Voltar ao topo">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true">
+      <path fill="white" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
