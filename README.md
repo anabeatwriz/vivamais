@@ -28,7 +28,7 @@ O projeto está hospedado no GitHub Pages:
 
 ## Como rodar localmente
 
-1. Clone o repositório: `git clone https://github.com/seu-usuario/viva-mais.git`
+1. Clone o repositório: `git clone https://github.com/anabeatwriz/viva-mais.git`
 2. Abra o arquivo `index.html` no navegador
 
 ## Autora
