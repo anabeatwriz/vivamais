@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+  <meta name="description" content="Viva Mais — Portal digital de saúde e bem-estar para a terceira idade de São José dos Pinhais, PR." />
+  <meta name="theme-color" content="#0C447C" />
+  <title>Viva Mais — Saúde e Bem-Estar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ==============================
+       CABEÇALHO
+  =============================== -->
+  <header class="header" role="banner">
+    <div class="header-logo">
+      <div class="header-logo-icone" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="header-titulo">Viva Mais</div>
+        <div class="header-subtitulo">Saúde &amp; Bem-Estar</div>
+      </div>
+    </div>
+    <a
+      href="#emergencias"
+      id="btn-emergencia-header"
+      class="btn-emergencia-header"
+      aria-label="Ver números de emergência"
+    >
+      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+      </svg>
+      SOS
+    </a>
+  </header>
+
+  <main role="main">
+
+    <!-- ==============================
+         HERO
+    =============================== -->
+    <section class="hero" aria-label="Boas-vindas">
+      <p class="hero-saudacao" id="saudacao">Bom dia!</p>
+      <h1 class="hero-titulo">
+        Cuide de você<br/>com <span>carinho</span> e<br/>simplicidade.
+      </h1>
+      <p class="hero-texto">
+        Informações de saúde, emergências e dicas de bem-estar,
+        tudo num lugar só — feito para você.
+      </p>
+    </section>
+
+    <!-- ==============================
+         EMERGÊNCIAS
+    =============================== -->
+    <section class="secao-emergencia" id="emergencias" aria-labelledby="titulo-emergencias">
+      <h2 class="secao-titulo" id="titulo-emergencias">🚨 Emergências — Ligue já</h2>
+
+      <div class="grid-emergencia" role="list">
+
+        <a href="tel:192" class="card-emergencia vermelho" role="listitem" aria-label="SAMU, número 192">
+          <div class="card-emergencia-icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 14H8v-2h4v2zm0-4H8v-2h4v2zm4 4h-2V7h2v10zM11 7H9V5h2v2zM7 7H5V5h2v2z"/>
+            </svg>
+          </div>
+          <div class="card-emergencia-nome">SAMU</div>
+          <div class="card-emergencia-numero">192</div>
+          <div class="card-emergencia-desc">Urgência médica</div>
+        </a>
+
+        <a href="tel:193" class="card-emergencia cinza-escuro" role="listitem" aria-label="Bombeiros, número 193">
+          <div class="card-emergencia-icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.66 11.2C17.43 10.9 17.15 10.64 16.89 10.38C16.22 9.78 15.46 9.35 14.82 8.72C13.33 7.26 13 4.85 13.95 3C13 3.23 12.17 3.75 11.46 4.32C8.87 6.4 7.85 10.07 9.07 13.22C9.11 13.32 9.15 13.42 9.15 13.55C9.15 13.77 9 13.97 8.8 14.05C8.57 14.15 8.33 14.09 8.14 13.93C8.08 13.88 8.04 13.83 8 13.76C6.87 12.33 6.69 10.28 7.45 8.64C5.78 10 4.87 12.3 5 14.47C5.06 14.97 5.12 15.47 5.29 15.97C5.43 16.57 5.7 17.17 6 17.7C7.08 19.43 8.95 20.67 10.96 20.92C13.1 21.19 15.39 20.8 17.03 19.32C18.86 17.66 19.5 15 18.56 12.72L18.43 12.46C18.22 12 17.66 11.2 17.66 11.2Z"/>
+            </svg>
+          </div>
+          <div class="card-emergencia-nome">Bombeiros</div>
+          <div class="card-emergencia-numero">193</div>
+          <div class="card-emergencia-desc">Incêndio e resgate</div>
+        </a>
+
+        <a href="tel:190" class="card-emergencia azul-escuro" role="listitem" aria-label="Polícia Militar, número 190">
+          <div class="card-emergencia-icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/>
+            </svg>
+          </div>
+          <div class="card-emergencia-nome">Polícia</div>
+          <div class="card-emergencia-numero">190</div>
+          <div class="card-emergencia-desc">Segurança pública</div>
+        </a>
+
+        <a href="tel:199" class="card-emergencia azul-medio" role="listitem" aria-label="Defesa Civil, número 199">
+          <div class="card-emergencia-icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/>
+            </svg>
+          </div>
+          <div class="card-emergencia-nome">Defesa Civil</div>
+          <div class="card-emergencia-numero">199</div>
+          <div class="card-emergencia-desc">Desastres e riscos</div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         CONTATOS ÚTEIS
+    =============================== -->
+    <section class="secao-contatos" id="contatos" aria-labelledby="titulo-contatos">
+      <h2 class="secao-titulo" id="titulo-contatos">📞 Outros contatos úteis</h2>
+
+      <a href="tel:188" class="card-contato" aria-label="CVV — Centro de Valorização da Vida, número 188">
+        <div class="card-contato-icone azul">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <div class="card-contato-info">
+          <div class="card-contato-nome">CVV — Apoio emocional</div>
+          <div class="card-contato-numero">188</div>
+          <div class="card-contato-sub">24h por dia, gratuito</div>
+        </div>
+        <div class="card-contato-seta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="tel:08002821060" class="card-contato" aria-label="Disque Saúde, número 136">
+        <div class="card-contato-icone verde">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 3a3 3 0 110 6 3 3 0 010-6zm5 12H7v-.75C7 15.38 9.24 14 12 14s5 1.38 5 3.25V18z"/>
+          </svg>
+        </div>
+        <div class="card-contato-info">
+          <div class="card-contato-nome">Disque Saúde</div>
+          <div class="card-contato-numero">136</div>
+          <div class="card-contato-sub">Dúvidas sobre saúde</div>
+        </div>
+        <div class="card-contato-seta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="tel:100" class="card-contato" aria-label="Disque Direitos Humanos, número 100">
+        <div class="card-contato-icone amarelo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2a5 5 0 100 10A5 5 0 0012 2zm0 2a3 3 0 110 6 3 3 0 010-6zm-7 14c0-2.21 3.13-4 7-4s7 1.79 7 4v1H5v-1zm-2 3h18v-3c0-3.31-3.58-6-8-6H7C4.24 12 2 13.57 2 16v3z"/>
+          </svg>
+        </div>
+        <div class="card-contato-info">
+          <div class="card-contato-nome">Direitos Humanos</div>
+          <div class="card-contato-numero">100</div>
+          <div class="card-contato-sub">Denúncia de maus tratos ao idoso</div>
+        </div>
+        <div class="card-contato-seta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="tel:197" class="card-contato" aria-label="Disque Denúncia, número 197">
+        <div class="card-contato-icone azul">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+          </svg>
+        </div>
+        <div class="card-contato-info">
+          <div class="card-contato-nome">Disque Denúncia</div>
+          <div class="card-contato-numero">197</div>
+          <div class="card-contato-sub">Denúncia anônima — Polícia Civil</div>
+        </div>
+        <div class="card-contato-seta" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- ==============================
+         SAÚDE E DICAS
+    =============================== -->
+    <section class="secao-saude" id="saude" aria-labelledby="titulo-saude">
+      <h2 class="secao-titulo" id="titulo-saude">💙 Dicas de saúde e bem-estar</h2>
+
+      <!-- Cards pequenos (2 colunas) -->
+      <div class="grid-dicas" role="list">
+
+        <article class="card-dica" role="listitem">
+          <div class="card-dica-icone azul" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14.5v-4.5H7l5-8v4.5h4l-5 8z"/>
+            </svg>
+          </div>
+          <div class="card-dica-titulo">Hidratação</div>
+          <div class="card-dica-texto">Beba pelo menos 6 a 8 copos de água por dia, mesmo sem sentir sede.</div>
+        </article>
+
+        <article class="card-dica" role="listitem">
+          <div class="card-dica-icone verde" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7z"/>
+            </svg>
+          </div>
+          <div class="card-dica-titulo">Movimente-se</div>
+          <div class="card-dica-texto">Caminhadas leves de 20 min por dia já fazem uma grande diferença na saúde.</div>
+        </article>
+
+        <article class="card-dica" role="listitem">
+          <div class="card-dica-icone laranja" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18a8 8 0 110-16 8 8 0 010 16zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+            </svg>
+          </div>
+          <div class="card-dica-titulo">Sono regular</div>
+          <div class="card-dica-texto">Durma entre 7 e 9 horas por noite. Um sono bom protege memória e humor.</div>
+        </article>
+
+        <article class="card-dica" role="listitem">
+          <div class="card-dica-icone roxo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/>
+            </svg>
+          </div>
+          <div class="card-dica-titulo">Consultas</div>
+          <div class="card-dica-texto">Mantenha exames e consultas médicas em dia. Prevenção é o melhor remédio.</div>
+        </article>
+
+      </div>
+
+      <!-- Cards expandíveis -->
+      <div aria-label="Dicas detalhadas de saúde">
+
+        <article class="card-dica-expandivel" aria-expanded="false">
+          <div class="card-dica-header" role="button" tabindex="0" aria-label="Como controlar a pressão arterial — clique para expandir">
+            <div class="card-dica-icone azul" style="flex-shrink:0" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px">
+                <path fill="var(--azul-medio)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
+            <div class="card-dica-header-info">
+              <div class="card-dica-titulo">Pressão arterial</div>
+              <div class="card-dica-texto">Como manter sob controle</div>
+            </div>
+            <div class="card-dica-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10l5 5 5-5z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-dica-conteudo" role="region">
+            <div class="card-dica-conteudo-inner">
+              <p>Reduza o sal nas refeições. Prefira temperos naturais como alho, limão e ervas.</p>
+              <p>Evite bebidas alcoólicas e cigarro, que elevam a pressão e prejudicam o coração.</p>
+              <p>Meça a pressão regularmente, de preferência sempre no mesmo horário.</p>
+              <p>Em caso de pressão muito alta (acima de 180/110), procure atendimento médico urgente ou ligue para o SAMU: <strong>192</strong>.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-dica-expandivel" aria-expanded="false">
+          <div class="card-dica-header" role="button" tabindex="0" aria-label="Cuidados com diabetes — clique para expandir">
+            <div class="card-dica-icone verde" style="flex-shrink:0" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px">
+                <path fill="var(--verde)" d="M17 8C8 10 5.9 16.17 3.82 22H5.71C5.97 21.33 6.27 20.67 6.61 20H17C17 20 21 19 21 8C21 8 19 8 17 8Z"/>
+              </svg>
+            </div>
+            <div class="card-dica-header-info">
+              <div class="card-dica-titulo">Diabetes</div>
+              <div class="card-dica-texto">Cuidados essenciais no dia a dia</div>
+            </div>
+            <div class="card-dica-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10l5 5 5-5z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-dica-conteudo" role="region">
+            <div class="card-dica-conteudo-inner">
+              <p>Prefira alimentos com baixo índice glicêmico: aveia, legumes, verduras e frutas com casca.</p>
+              <p>Evite açúcar, refrigerantes e alimentos ultraprocessados.</p>
+              <p>Nunca pule refeições. Coma em pequenas porções ao longo do dia.</p>
+              <p>Realize a glicemia em jejum regularmente e siga as orientações do seu médico sobre o uso de insulina ou medicamentos.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-dica-expandivel" aria-expanded="false">
+          <div class="card-dica-header" role="button" tabindex="0" aria-label="Saúde mental e bem-estar emocional — clique para expandir">
+            <div class="card-dica-icone roxo" style="flex-shrink:0" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px">
+                <path fill="#5E47C8" d="M12 2a10 10 0 100 20A10 10 0 0012 2zm1 17.93V18h-2v1.93A8.001 8.001 0 014.07 13H6v-2H4.07A8.001 8.001 0 0111 4.07V6h2V4.07A8.001 8.001 0 0119.93 11H18v2h1.93A8.001 8.001 0 0113 19.93z"/>
+              </svg>
+            </div>
+            <div class="card-dica-header-info">
+              <div class="card-dica-titulo">Saúde mental</div>
+              <div class="card-dica-texto">Bem-estar emocional na terceira idade</div>
+            </div>
+            <div class="card-dica-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10l5 5 5-5z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="card-dica-conteudo" role="region">
+            <div class="card-dica-conteudo-inner">
+              <p>Mantenha contato com amigos e família. A solidão pode afetar seriamente a saúde.</p>
+              <p>Encontre uma atividade que te dê prazer: jardinagem, leitura, artesanato, dança ou oração.</p>
+              <p>Se sentir tristeza prolongada, choro frequente ou falta de vontade de viver, não hesite em buscar ajuda.</p>
+              <p>O CVV oferece apoio emocional gratuito 24 horas por dia. Ligue: <strong>188</strong>.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         ALIMENTAÇÃO
+    =============================== -->
+    <section class="secao-alimentacao" id="alimentacao" aria-labelledby="titulo-alimentacao">
+      <h2 class="secao-titulo" id="titulo-alimentacao">🥗 Alimentação saudável</h2>
+
+      <div class="card-alimentacao">
+        <div class="card-alimentacao-header">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-4.5-6.72-5-7.52-5C5.18 9.99 1 12.5 1 14.99v1h15.03v-1z"/>
+          </svg>
+          <span>O que comer bem na terceira idade</span>
+        </div>
+        <ul class="card-alimentacao-lista" role="list">
+          <li class="card-alimentacao-item" role="listitem">
+            <span class="card-alimentacao-bullet" aria-hidden="true"></span>
+            <span>Prefira arroz integral, feijão, lentilha e aveia — ricos em fibras e energia duradoura</span>
+          </li>
+          <li class="card-alimentacao-item" role="listitem">
+            <span class="card-alimentacao-bullet" aria-hidden="true"></span>
+            <span>Inclua frutas variadas diariamente: banana, mamão, laranja e uva são ótimas opções</span>
+          </li>
+          <li class="card-alimentacao-item" role="listitem">
+            <span class="card-alimentacao-bullet" aria-hidden="true"></span>
+            <span>Consuma cálcio para os ossos: leite, iogurte, queijo branco e couve</span>
+          </li>
+          <li class="card-alimentacao-item" role="listitem">
+            <span class="card-alimentacao-bullet" aria-hidden="true"></span>
+            <span>Prefira peixes, frango ou ovos no lugar de carnes vermelhas em excesso</span>
+          </li>
+          <li class="card-alimentacao-item" role="listitem">
+            <span class="card-alimentacao-bullet" aria-hidden="true"></span>
+            <span>Evite frituras, embutidos (mortadela, salsicha) e excesso de sal e açúcar</span>
+          </li>
+          <li class="card-alimentacao-item" role="listitem">
+            <span class="card-alimentacao-bullet" aria-hidden="true"></span>
+            <span>Faça de 5 a 6 pequenas refeições ao dia para manter o metabolismo ativo</span>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==============================
+       RODAPÉ
+  =============================== -->
+  <footer class="rodape" role="contentinfo">
+    <div class="rodape-logo">💙 Viva Mais</div>
+    <p class="rodape-texto">
+      Portal de saúde e bem-estar para a terceira idade<br />
+      São José dos Pinhais — PR
+    </p>
+    <div class="rodape-aviso" role="note">
+      ⚠️ As informações deste portal são de caráter educativo e não substituem consultas médicas. Em emergências, ligue imediatamente para o SAMU: <strong>192</strong>.
+    </div>
+  </footer>
+
+  <!-- ==============================
+       BANNER EMERGÊNCIA (pop-up)
+  =============================== -->
+  <aside
+    id="banner-sos"
+    class="banner-sos"
+    role="alertdialog"
+    aria-labelledby="banner-sos-titulo"
+    aria-hidden="true"
+  >
+    <div class="banner-sos-icone" aria-hidden="true">🚨</div>
+    <div class="banner-sos-texto">
+      <div class="banner-sos-titulo" id="banner-sos-titulo">Precisa de ajuda urgente?</div>
+      <div class="banner-sos-sub">SAMU: 192 · Bombeiros: 193 · Polícia: 190</div>
+    </div>
+    <button
+      id="fechar-banner"
+      class="banner-sos-fechar"
+      aria-label="Fechar aviso de emergência"
+    >✕</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
